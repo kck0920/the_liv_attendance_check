@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Scanner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="qr-container">
+        <video id="qr-video"></video>
+        <div id="scan-area"></div>
+    </div>
+    <div id="status">QR 코드를 스캔 영역 안에 위치시켜주세요</div>
+    <div id="popup"></div>
+    <div id="scanModal" class="modal">
+        <div class="modal-content">
+            <p id="modalText"></p>
+            <p class="completion-message">전송 완료</p>
+        </div>
+    </div>
+    <audio id="beepSound">
+        <source src="data:audio/mpeg;base64,//uQxAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAAFAAAGUACFhYWFhYWFhYWFhYWFhYWFhYWFvb29vb29vb29vb29vb29vb29vb3t7e3t7e3t7e3t7e3t7e3t7e3t7f////////////////////////////////8AAAA8TEFNRTMuOTlyBK8AAAAALAAAADUgJAKkQQABzAAABlAiHkqpAAAAAAAAAAAAAAAAAAAA//sQxAADgAABpAAAACAAADSAAAAETEFNRTMuOTkuNVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV" type="audio/mpeg">
+        해당 브라우저는 오디오를 지원하지 않습니다.
+    </audio>
+    <audio id="doneSound" src="done.mp3"></audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.3.1/dist/jsQR.js"></script>
+    <script src="att_check.js"></script>
+</body>
+</html>
